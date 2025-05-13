@@ -1,1 +1,1 @@
-repo for jsz automation of Adobe Photoshop
+repo for jsx automation of Adobe Photoshop
