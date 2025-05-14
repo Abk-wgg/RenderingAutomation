@@ -21,6 +21,9 @@ var myMaxPages = 100;
 var myCounter = 1;
 var myResolution = 300;
 var myColor = OpenDocumentMode.CMYK;
+var docMaster = app.activeDocument
+var docWork= docMaster.duplicate()
+
 
 //Set Background Color to white (not really needed...)
 app.backgroundColor.rgb.red = 255;
@@ -30,9 +33,10 @@ app.backgroundColor.rgb.blue = 255;
 // Start Open Dialog. If you don`t choose a File with Ending .pdf the Script stops
 var _pdfDatei = File.openDialog("Choose your Multipage-PDF-File");
 var myDatei = "" + _pdfDatei;
-var myEndung = myDatei.substr(myDatei.length - 4, 4);
+var myEnding = myDatei.substring(myDatei,-4);
 
-if (myEndung !== ".pdf") {
+
+if (myEnding !== ".pdf") {
     alert("No PDF choosen!\nStop Run!", "Error choosing File");
 } else {
     // Here I start with defining the OpenOptions of the PDF for the first Page (Using the Variables from above)
