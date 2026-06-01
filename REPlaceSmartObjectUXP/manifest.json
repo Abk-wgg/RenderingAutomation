@@ -1,0 +1,18 @@
+{
+  "id": "replace-smart-object.plugin",
+  "name": "Smart Object Replacer",
+  "version": "1.0.0",
+  "main": "index.html",
+  "host": {
+    "app": "PS",
+    "minVersion": "22.0.0"
+  },
+  "uiEntryPoints": [
+    {
+      "type": "panel",
+      "label": "Replace Smart Object",
+      "panelId": "smart-object-panel",
+      "menuLabel": "Replace Smart Object"
+    }
+  ]
+}
